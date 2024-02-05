@@ -3,7 +3,8 @@ dist: focal
 services:
   - postgresql
 
-env:
-  global:
-    - PGPORT=5433
-    - PGUSER=travis
+before_script:
+  - psql --version
+
+script:
+  - # Add your build/test commands here
